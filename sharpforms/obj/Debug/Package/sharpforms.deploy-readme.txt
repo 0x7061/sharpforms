@@ -1,0 +1,57 @@
+﻿
+===========================
+Voraussetzungen :
+--------------------------
+Zur Bereitstellung dieses Webpakets muss Web Deploy (msdeploy.exe) auf dem Computer installiert sein, auf dem die CMD-Datei ausgeführt wird. Informationen zur Installation von Web Deploy finden Sie unter der folgenden URL:
+http://go.microsoft.com/?linkid=9278654
+Für diese Batchdatei muss die Paketdatei "sharpforms.zip" und optional die Parameterdatei "sharpforms.SetParameters.xml" von der Umgebungsvariablen im gleichen Ordner oder Zielordner bereitgestellt werden.
+
+===========================
+Syntax:
+--------------------------
+sharpforms.deploy.cmd [/T|/Y] [/M:Computername] [/U:Benutzername] [/P:Kennwort] [/G:UseTempAgent] [Zusätzliche msdeploy.exe-Flags ...]
+
+
+===========================
+Erforderliche Flags:
+--------------------------
+/T:
+	Ruft "msdeploy.exe" mit dem Flag "-whatif" auf, das die Bereitstellung simuliert. Dadurch wird das Paket nicht bereitgestellt. Stattdessen wird ein Bericht darüber erstellt, was passiert, wenn Sie das Paket tatsächlich bereitstellen.
+/Y:
+	Ruft "msdeploy.exe" ohne das Flag "-whatif" auf, wodurch das Paket auf dem aktuellen Computer oder einem Zielserver bereitgestellt wird. Verwenden Sie /Y, nachdem Sie die Ausgabe überprüft haben, die unter Verwendung des Flags /T generiert wurde.
+
+Hinweis: Verwenden Sie /T und /Y nicht in demselben Befehl.
+
+===========================
+Optionale Flags:
+--------------------------
+ Dieses Skript wird standardmäßig auf dem aktuellen Computer bereitgestellt, auf dem das Skript mit aktuellen Benutzeranmeldeinformationen ohne Agent-Dienst aufgerufen wird. Übergeben Sie nur den folgenden Wert für ein erweitertes Szenario.
+
+/M:<Name des Zielservers oder der Dienst-URL>
+	Wenn dieses Flag nicht angegeben wird, wird das Paket auf dem Computer installiert, auf dem der Befehl ausgeführt wird. Die Dienst-URL kann das folgende Format aufweisen:
+		https://<Zielserver>:8172/MSDeploy.axd 
+	Für dieses Format muss IIS 7 auf dem Zielserver installiert sein, und IIS 7 Web Management Service (WMSvc) und der Webbereitstellungshandler müssen eingerichtet sein.
+	Die Dienst-URL kann auch das folgende Format aufweisen:
+		http://<Zielserver>/MSDeployAgentService 
+	Für dieses Format sind Administratorrechte auf dem Zielserver erforderlich, und Web Deploy Remote Service (MsDepSvc) muss auf dem Zielserver installiert sein. IIS 7 muss nicht auf dem Zielserver installiert sein.
+
+/U:<Benutzername>
+/P:<Kennwort>
+/G:<True | False>
+	Gibt an, dass das Paket durch Erstellen eines temporären Listeners auf dem Zielserver bereitgestellt wird. Hierfür ist keine besondere Installation auf dem Zielserver erforderlich, Sie müssen auf diesem Server jedoch Administrator sein. Der Standardwert für dieses Flag ist "False". 
+
+[Zusätzliche msdeploy.exe-Flags]
+	Der Befehl "msdeploy.exe" unterstützt zusätzliche Flags. Sie können eines dieser zusätzlichen Flags in die Datei "$(ProjectName).Deploy.cmd" einschließen; die Flags werden während der Ausführung an "msdeploy.exe" übergeben.
+	Alternativ können Sie zusätzliche Flags angeben, indem Sie die Umgebungsvariable "_MsDeployAdditionalFlags" festlegen. Diese Einstellungen werden von dieser Batchdatei verwendet.
+	Hinweis: Flagwerte, die ein Gleichheitszeichen (=) umfassen, müssen in doppelte Anführungszeichen eingeschlossen werden, wie im folgenden Beispiel dargestellt. Dadurch wird die Bereitstellung der Datenbanken übersprungen, die in dem Paket enthalten sind:
+		"-skip:objectName=dbFullSql" 
+
+===========================
+Umgebungsspezifische Einstellungen:
+--------------------------
+
+	Zur Anpassung anwendungsspezifischer Einstellungen für jede Bereitstellungsumgebung (z.B. des IIS-Anwendungsnamens, des physikalischen Pfads sowie von Verbindungszeichenfolgen) bearbeiten Sie die Einstellungen in der folgenden Datei: 
+		 "sharpforms.SetParameters.xml"
+===========================
+Weitere Informationen zu diesem Bereitstellungsskript erhalten Sie unter:	http://go.microsoft.com/fwlink/?LinkID=183544
+

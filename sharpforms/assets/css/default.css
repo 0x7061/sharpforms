@@ -1,0 +1,167 @@
+﻿/*
+ * > Sharpforms main frontend interface stylesheet <
+ *
+ * Copyright (c) 2012 Aleksandar Palic - mt111102 - FH St. Pölten
+ * Released under MIT license
+ * 
+ * Twitter: _skripted
+ * Github: skripted
+ * Email: palic@gmx.at
+ *
+ */
+
+body { background: url(../img/bg.png) repeat; }
+
+a { color: #63b8ee; text-decoration: none; }
+a:hover { color: #468ccf; }
+
+.outer { width: 100%; height: 2.5em; background: url(../img/status-bar.png) repeat; border-bottom: 1px #333 solid; }
+.inner { width: 990px; margin: 0 auto; }
+
+.ctrl-panel { float: left; width: 990px; margin: 0 0 2em 0; padding: 0.75em 0 5px 0; }
+.ctrl-panel h1 { float: left; margin: 0; padding: 0; font-size: 0.9em; font-weight: bold; color: #FFF; }
+.ctrl-panel div { float: right; margin: -0.35em 0; font-size: 0.8em; font-weight: bold; color: #CCC ; }
+.ctrl-panel div input[type="text"] { width: 230px; padding: 0.4em; font-size: 0.9em; border: 1px #555555 solid; background-color: #DDDDDD; }
+
+.welcome-panel { float: left; width: 954px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); background-color: #FFF; margin: 0 0 1em 0; padding: 1.4em; font-size: 0.8em; }
+.welcome-panel div { font-size: 2em; }
+
+.form-panel { float: left; width: 990px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); background-color: #FFF; }
+
+input[type="text"] { width: 99.0%; padding: 3px; font-family: Sans-Serif; font-size: 0.9em; color: #888888; border: 1px #888 solid; box-shadow: inset 1px 1px 1px #AAAAAA; }
+input[type="text"]:focus { color: #000000; }
+textarea { width: 99.0%; margin: 0 0; padding: 3px; font-family: Sans-Serif; font-size: 0.9em; color: #888888; border: 1px #888 solid; box-shadow: inset 1px 1px 1px #AAAAAA; }
+textarea:focus { color: #000000; }
+
+#txtFormName { font-weight: bold; }
+#lblMessage { display: block; margin: 1.6em 1.75em 0em 1.75em; padding: 0.5em; font-size: 0.9em; }
+
+.green { background-color: #b8ffb8; }
+.red { background-color: #ffb8b8; }
+
+.form-info { padding: 1.5em; }
+.form-info input[type="text"] { margin: 0.5em 0; }
+
+.form-entry { min-height: 6em; padding: 1.5em; cursor: move; margin: 0.2em 0; }
+.form-entry:hover { background-color: #FFF4C2; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
+.form-entry:hover .tools { display: block; }
+.form-entry div { font-size: 0.8em; font-weight: bold; padding: 0 0 0.5em 0; }
+.form-entry-active { background-color: #FFF4C2; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
+.form-entry-active:hover .tools { display: none; }
+.form-entry-inactive { cursor: default; }
+.form-entry-inactive:hover { background-color: #FFFFFF; box-shadow: 0 0 0 rgba(0, 0, 0, 0.0); cursor: default; }
+.form-entry-inactive:hover .tools { display: none; }
+.form-entry textarea { width: 99.0%; }
+
+.question { float: left; width: 90%; min-height: 1.5em; }
+.infotext { float: left; width: 90%; min-height: 20px; color: #AAAAAA; }
+
+.tools { float: right; width: 8%; display: none; }
+.tools img { margin: 0 2px; cursor: pointer; }
+.tools-active { display: block; }
+
+.submit-form { margin: 1.5em; }
+
+.button {
+    -moz-box-shadow: inset 0px 1px 0px 0px #bee2f9;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #bee2f9;
+
+    box-shadow: inset 0px 1px 0px 0px #bee2f9;
+
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #63b8ee), color-stop(1, #468ccf) );
+    background: -moz-linear-gradient( center top, #63b8ee 5%, #468ccf 100% );
+    background-color: #63b8ee;
+
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#63b8ee', endColorstr='#468ccf');
+
+    border: 1px solid #3866a3;
+
+    display: inline-block;
+
+    color: #14396a;
+
+    font-family: arial;
+    font-size: 0.9em;
+    font-weight: bold;
+
+    padding: 0.4em 1.5em;
+
+    text-decoration: none;
+    text-shadow: 1px 1px 0px #7cacde;
+    
+    cursor: pointer;
+}
+
+.button:hover {
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #468ccf), color-stop(1, #63b8ee) );
+    background: -moz-linear-gradient( center top, #468ccf 5%, #63b8ee 100% );
+
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee');
+
+    background-color: #468ccf;
+}
+
+.disabled {
+    -moz-box-shadow: inset 0px 1px 0px 0px #DDDDDD;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #DDDDDD;
+    box-shadow: inset 0px 1px 0px 0px #DDDDDD;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #AAAAAA), color-stop(1, #666666) );
+    background: -moz-linear-gradient( center top, #AAAAAA 5%, #666666 100% );
+    background-color: #AAAAAA;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#AAAAAA', endColorstr='#666666');
+    border: 1px solid #000000;
+    color: #333333;
+    text-shadow: 1px 1px 0px #888888;
+}
+
+.disabled:hover {
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #666666), color-stop(1, #AAAAAA) );
+    background: -moz-linear-gradient( center top, #666666 5%, #AAAAAA 100% );
+
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#666666', endColorstr='#AAAAAA');
+
+    background-color: #666666;
+}
+
+.button:active { position: relative; top:1px; }
+.small { display: block; margin: 2em 0 0 0; font-size: 0.7em; }
+
+
+/* Other pages */
+
+#info_box { padding: 1em; font-size: 2em; font-weight: bold; text-align: center; color: #888888; }
+
+
+/* Form.aspx.cs */
+
+#form_box  {
+    padding: 1.75em;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.form-view-question { height: 10.5em; }
+
+#form_box h2 { font-size: 2em; margin: 0; padding: 0; }
+#form_box h5 { font-size: 1.2em; margin: 1em 0 4em 0; color: #888888; }
+
+#form_box .question { height: 2.0em; }
+#form_box .infotext { height: 2.0em; }
+
+#form_box #submitentry { margin: 4em 0 0 0; }
+
+.form-view-button { width: 8em; }
+
+#form_box #back_button { margin: 4em 0 0 0; }
+
+#form_box table tr td { padding: 1em 0.5em 1em 0.5em; }
+#form_box table tr td.head { color: #888888; }
+#form_box table tr:hover td { background-color: #FFF4C2; }
+
+/* Entry.aspx.cs */
+
+#form_entryBox  { padding: 1.75em; font-size: 0.8em; font-weight: bold; }
+
+.entry-infotext { color: #AAAAAA; }
+
+.answer-box { padding: 2em; }

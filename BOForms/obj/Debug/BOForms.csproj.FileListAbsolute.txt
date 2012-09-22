@@ -1,0 +1,10 @@
+c:\users\imac\documents\visual studio 2010\Projects\sharpforms_map\BOForms\bin\Debug\BOForms.dll
+c:\users\imac\documents\visual studio 2010\Projects\sharpforms_map\BOForms\bin\Debug\BOForms.pdb
+c:\users\imac\documents\visual studio 2010\Projects\sharpforms_map\BOForms\obj\Debug\ResolveAssemblyReference.cache
+c:\users\imac\documents\visual studio 2010\Projects\sharpforms_map\BOForms\obj\Debug\BOForms.dll
+c:\users\imac\documents\visual studio 2010\Projects\sharpforms_map\BOForms\obj\Debug\BOForms.pdb
+C:\Users\iMac\Dropbox\My_Cloud\Studium\SS2012\SWE\Visual Studio Projects\sharpforms_map\BOForms\bin\Debug\BOForms.dll
+C:\Users\iMac\Dropbox\My_Cloud\Studium\SS2012\SWE\Visual Studio Projects\sharpforms_map\BOForms\bin\Debug\BOForms.pdb
+C:\Users\iMac\Dropbox\My_Cloud\Studium\SS2012\SWE\Visual Studio Projects\sharpforms_map\BOForms\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\iMac\Dropbox\My_Cloud\Studium\SS2012\SWE\Visual Studio Projects\sharpforms_map\BOForms\obj\Debug\BOForms.dll
+C:\Users\iMac\Dropbox\My_Cloud\Studium\SS2012\SWE\Visual Studio Projects\sharpforms_map\BOForms\obj\Debug\BOForms.pdb

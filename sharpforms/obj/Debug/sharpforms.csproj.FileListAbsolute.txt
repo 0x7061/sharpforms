@@ -1,0 +1,7 @@
+c:\users\imac\documents\visual studio 2010\Projects\sharpforms_map\sharpforms\bin\sharpforms.dll
+c:\users\imac\documents\visual studio 2010\Projects\sharpforms_map\sharpforms\bin\sharpforms.pdb
+c:\users\imac\documents\visual studio 2010\Projects\sharpforms_map\sharpforms\obj\Debug\ResolveAssemblyReference.cache
+c:\users\imac\documents\visual studio 2010\Projects\sharpforms_map\sharpforms\obj\Debug\sharpforms.dll
+c:\users\imac\documents\visual studio 2010\Projects\sharpforms_map\sharpforms\obj\Debug\sharpforms.pdb
+c:\users\imac\documents\visual studio 2010\Projects\sharpforms_map\sharpforms\bin\BOForms.dll
+c:\users\imac\documents\visual studio 2010\Projects\sharpforms_map\sharpforms\bin\BOForms.pdb
